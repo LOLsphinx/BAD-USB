@@ -1,15 +1,15 @@
 @echo off
 :main
 color a
-echo ----------------------------------------------------------------------------------------
-echo ""
-echo "    _________      .__    .__                "
-echo "   /   _____/_____ |  |__ |__| ____ ___  ___ "
-echo "   \_____  \\____ \|  |  \|  |/    \\  \/  / "
-echo "   /        \  |_> >   Y  \  |   |  \>    <  "
-echo "  /_______  /   __/|___|  /__|___|  /__/\_ \ "
-echo "          \/|__|        \/        \/      \/ "
-echo ""
+echo
+echo 
+echo       _________      .__    .__                
+echo      /   _____/_____ |  |__ |__| ____ ___  ___ 
+echo      \_____  \\____ \|  |  \|  |/    \\  \/  / 
+echo      /        \  |_> >   Y  \  |   |  \>    <  
+echo     /_______  /   __/|___|  /__|___|  /__/\_ \ 
+echo             \/|__|        \/        \/      \/ 
+echo
 echo SPHINX~
 echo https://github.com/LOLsphinx/BAD-USB
 
@@ -63,9 +63,9 @@ timeout /t 4
 exit
 ) else if "%sphinx%"=="no" (
 cls
-attrib -h -s -r sphinx.vbs
-attrib -h -s -r sphinx.cmd
-attrib -h -s -r sphinx1.vbs
+attrib -h -s -r sphinx.vbs > nul
+attrib -h -s -r sphinx.cmd > nul
+attrib -h -s -r sphinx1.vbs > nul
 echo ""
 echo "     .-."
 echo "    (o.o)"
@@ -111,7 +111,6 @@ echo ""
 echo ~Make sure the No and Yes is all small letters!
 echo please redo it again.
 timeout /t 3 /nobreak >nul
+cls
 goto :main
 )
-
-pause
